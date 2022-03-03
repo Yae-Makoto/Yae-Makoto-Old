@@ -1,0 +1,35 @@
+.button {
+    background-color: white;
+    fill: pink;
+    width: 45px;
+    height: 45px;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button_space {
+    width: 45px;
+    height: 45px;
+}
+
+.button_round {
+    border-radius: 5px;
+}
+
+.button_outlined {
+    border: 1px solid pink;
+}
+
+.button:hover,
+.button_active {
+    fill: white;
+    background-color: pink;
+}
+
+.button svg {
+    width: 25px;
+    height: 25px;
+}

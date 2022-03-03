@@ -1,0 +1,113 @@
+.cover_page,
+.cover_img {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cover_img {
+    -webkit-animation-name: breathe;
+    animation-name: breathe;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-duration: 11s;
+    animation-duration: 11s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.cover_img img {
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+@-webkit-keyframes breathe {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes breathe {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cover_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cover_page>*:nth-child(1) h1 {
+    font-weight: lighter;
+    font-size: 10vh;
+    margin: 0px;
+    width: 100vw;
+}
+
+.cover_page>*:nth-child(2) {
+    margin-top: -30vh;
+}
+
+.cover_page>*:nth-child(3) {
+    margin-top: 30vh;
+}
+
+.cover_page_index_block {
+    display: flex;
+}
+
+.cover_page_index_block>.cover_page_index {
+    margin: 3vmin;
+    z-index: 999;
+    width: 20vh;
+    height: 20vh;
+}
+
+.cover_page_index_block>.cover_page_index .flip_card_face {
+    border: 2px solid pink;
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover_page_index_block>.cover_page_index .flip_card_face_front {
+    background-color: pink;
+}
+
+.cover_page_index_block>.cover_page_index .flip_card_face_back>div {
+    background-color: pink;
+    color: white;
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+
+.cover_page_index_block>.cover_page_index .flip_card_face svg {
+    fill: white;
+    width: 10vh;
+    height: 10vh;
+}

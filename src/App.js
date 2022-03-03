@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import smoothscroll from 'smoothscroll-polyfill';
+import './App.less';
 import './App.css';
+import Favorite from './components/pages/Contents/ContentPages/Favorite';
+import Notes from './components/pages/Contents/ContentPages/Notes';
+import Self from './components/pages/Contents/ContentPages/Self';
+import Works from './components/pages/Contents/ContentPages/Works';
+import Cover from './components/pages/Cover/Cover';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default function App() {
+
+    smoothscroll.polyfill();
+
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Cover />} />
+                    <Route path="/self" element={<Self />} />
+                    <Route path="/favorite" element={<Favorite />} />
+                    <Route path="/notes" element={<Notes />} />
+                    <Route path="/works" element={<Works />} />
+                    <Route path="*" />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
-
-export default App;
