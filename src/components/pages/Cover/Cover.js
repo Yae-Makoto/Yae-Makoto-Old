@@ -1,5 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Animator, batch, Fade, MoveIn, Sticky, Zoom } from "react-scroll-motion";
+import { scrollToBottom, scrollToTop } from "../../../services/Helper/ScrollHelper";
 import TrueOrFalse from "../../../services/Helper/TrueOrFalse";
 import useWindowDimension from "../../../services/Hooks/useWindowDimension";
 import { ButtonScrollDown } from "../../blocks/Buttons/ButtonScrollDown";
@@ -14,6 +16,18 @@ export default function Cover() {
 
     const { height, width } = useWindowDimension();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        var timer;
+        if (location.state === 'back') {
+            scrollToTop('auto');
+            timer = setTimeout(() => {
+                scrollToBottom();
+            }, 600);
+        }
+        return () => clearTimeout(timer);
+    }, [])
 
     return (
         <Template

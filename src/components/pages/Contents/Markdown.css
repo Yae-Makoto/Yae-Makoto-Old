@@ -1,3 +1,15 @@
 .markdown{
     text-align: start;
+    padding: 10vmin;
+}
+
+img.head{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    float: right;
+}
+
+.markdown h1{
+    font-size: 50px;
 }

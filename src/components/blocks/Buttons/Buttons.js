@@ -42,7 +42,8 @@ export function ButtonBack(props) {
 
     const navigate = useNavigate();
     const onClickEvent = () => {
-        to ? navigate(to) : navigate(-1);
+        to ? navigate(to, { state: { sgn: 'back' } }) : navigate('/', { state: 'back' });
+
         callback();
     }
     return (
