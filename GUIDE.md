@@ -20,7 +20,7 @@ Add `A` record to your domain's DNS record with `target` =
 In Git Bash, do
 
 ~~~
-dig [domain] +noall +answer -t A
+dig yae-makoto.tk +noall +answer -t A
 ~~~
 
 ## *Step IV*
