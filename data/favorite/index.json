@@ -1,0 +1,138 @@
+{
+    "genshin.mp4": {
+        "lang": {
+            "en": "Genshin Impact",
+            "zh": "原神"
+        },
+        "type": "v",
+        "genre": "genshin"
+    },
+    "神女劈观.mp4": {
+        "lang": {
+            "en": "The Divine Damsel of Devastation",
+            "zh": "神女劈观"
+        },
+        "type": "v",
+        "genre": "genshin"
+    },
+    "yaemiko_cd.mp4": {
+        "lang": {
+            "en": "Yae Miko: Anecdote of a Divine Kitsune Guuji",
+            "zh": "八重神子：仙狐宫司异闻录"
+        },
+        "type": "v",
+        "genre": "genshin"
+    },
+    "raiden_cd.mp4": {
+        "lang": {
+            "en": "Raiden Shogun: Judgment of Euthymia",
+            "zh": "雷電将軍：浄土裁断"
+        },
+        "type": "v",
+        "genre": "genshin"
+    },
+    "Liyue.mp4": {
+        "lang": {
+            "en": "Liyue",
+            "zh": "璃月"
+        },
+        "type": "a",
+        "genre": "genshin"
+    },
+    "Termination of Desires.mp3": {
+        "lang": {
+            "en": "Termination of Desires",
+            "zh": "何妄何执"
+        },
+        "type": "a",
+        "genre": "genshin"
+    },
+    "Rage Beneath the Mountains.mp3": {
+        "lang": {
+            "en": "Rage Beneath the Mountains",
+            "zh": "岩壑之崩"
+        },
+        "type": "a",
+        "genre": "genshin"
+    },
+    "Will of the Herrscher.mp4": {
+        "lang": {
+            "en": "Will of the Herrscher",
+            "zh": "女王降临"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Final Lesson.mp4": {
+        "lang": {
+            "en": "Final Lesson",
+            "zh": "最后一课"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Awaken.mp4": {
+        "lang": {
+            "en": "Awaken",
+            "zh": "觉醒"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Meteoric Salvation.mp4": {
+        "lang": {
+            "en": "Meteoric Salvation",
+            "zh": "天穹流星"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Lament of the Fallen.mp4": {
+        "lang": {
+            "en": "Lament of the Fallen",
+            "zh": "罪人挽歌"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Shattered Samsara.mp4": {
+        "lang": {
+            "en": "Shattered Samsara",
+            "zh": "渡尘"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Everlasting Flames.mp4": {
+        "lang": {
+            "en": "Everlasting Flames",
+            "zh": "薪炎永燃"
+        },
+        "type": "v",
+        "genre": "honkai"
+    },
+    "Nightglow.mp3": {
+        "lang": {
+            "en": "Nightglow",
+            "zh": "Nightglow"
+        },
+        "type": "a",
+        "genre": "honkai"
+    },
+    "Rubia.mp3": {
+        "lang": {
+            "en": "Rubia",
+            "zh": "Rubia"
+        },
+        "type": "a",
+        "genre": "honkai"
+    },
+    "Moon Halo.mp3": {
+        "lang": {
+            "en": "Moon Halo",
+            "zh": "Moon Halo"
+        },
+        "type": "a",
+        "genre": "honkai"
+    }
+}
