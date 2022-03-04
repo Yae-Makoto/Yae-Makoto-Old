@@ -22,7 +22,6 @@ export default function useAutoScroll() {
         const destroyListener = createScrollStopListener(() => {
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            console.log(winScroll)
             if (winScroll < height / 2) {
                 scrollToTop();
             } else {

@@ -7,6 +7,8 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: contain;
+    -webkit-font-smoothing: antialiased;
 }
 
 

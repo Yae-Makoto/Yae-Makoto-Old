@@ -5,11 +5,12 @@ import Layout, { Header, Content, Footer } from 'antd/lib/layout/layout';
 import Sider from 'antd/lib/layout/Sider';
 import { useEffect, useState } from 'react';
 import { scrollToBottom, scrollToTop } from '../../../services/Helper/ScrollHelper';
-import { Menu } from 'antd';
+import { Menu, Spin } from 'antd';
 import { SvgMenu } from '../../blocks/SvgIcon/SvgIcon';
 import { ButtonBack, ButtonMenu } from '../../blocks/Buttons/Buttons';
 import { ButtonScrollDown } from '../../blocks/Buttons/ButtonScrollDown';
 import './Markdown.css';
+import ProLayout, { PageLoading } from '@ant-design/pro-layout';
 export default function Contents(props) {
 
     const coverIcon = props.coverIcon;
@@ -17,9 +18,10 @@ export default function Contents(props) {
 
     const menu = props.menu;
     const title = props.title;
-
+    
     const pureContent = props.pureContent;
-    console.log(title, menu)
+
+    const menuContent = props.menuContent;
 
     const [siderCollapes, setSiderCollapes] = useState(true);
 
@@ -50,16 +52,8 @@ export default function Contents(props) {
                             collapsed={siderCollapes}
                             collapsedWidth={0}
                             defaultCollapsed={true}>
-                            <Menu mode="inline" defaultSelectedKeys={['1']}>
-                                <Menu.Item key="1">
-                                    nav 1
-                                </Menu.Item>
-                                <Menu.Item key="2">
-                                    nav 2
-                                </Menu.Item>
-                                <Menu.Item key="3">
-                                    nav 3
-                                </Menu.Item>
+                            <Menu mode="inline" defaultSelectedKeys={['1']} className="content_sider">
+                                {menuContent}
                             </Menu>
                         </Sider>
                         <Layout>
