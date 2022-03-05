@@ -31,6 +31,7 @@ export default function Self() {
                     :
                     <Spin />
             }
+            siderDefaultCollapsed={true}
         />
     );
 }

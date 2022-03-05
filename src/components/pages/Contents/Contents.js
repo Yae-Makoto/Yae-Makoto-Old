@@ -18,12 +18,15 @@ export default function Contents(props) {
 
     const menu = props.menu;
     const title = props.title;
-    
+
     const pureContent = props.pureContent;
 
     const menuContent = props.menuContent;
+    const menuOnclick = props.menuOnclick;
 
-    const [siderCollapes, setSiderCollapes] = useState(true);
+    const siderDefaultCollapsed = props.siderDefaultCollapsed;
+
+    const [siderCollapes, setSiderCollapes] = useState(siderDefaultCollapsed);
 
     useEffect(() => {
         scrollToTop('auto');
@@ -51,8 +54,8 @@ export default function Contents(props) {
                         <Sider trigger={null} collapsible
                             collapsed={siderCollapes}
                             collapsedWidth={0}
-                            defaultCollapsed={true}>
-                            <Menu mode="inline" defaultSelectedKeys={['1']} className="content_sider">
+                            defaultCollapsed={siderDefaultCollapsed}>
+                            <Menu mode="inline" defaultSelectedKeys={['1']} className="content_sider" onClick={(item) => menuOnclick(item.key)}>
                                 {menuContent}
                             </Menu>
                         </Sider>
@@ -60,7 +63,7 @@ export default function Contents(props) {
                             <Header>
                                 <div className='header'>
                                     <ButtonMenu none={!menu} round outlined active onClick={() => setSiderCollapes(pre => !pre)} />
-                                    <h1>{title}</h1>
+                                    <h1 id="content_header_title">{title}</h1>
                                     <ButtonBack round outlined />
                                 </div>
                             </Header>

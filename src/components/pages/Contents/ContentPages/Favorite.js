@@ -1,32 +1,29 @@
 
 import { Menu, Spin } from "antd";
 import SubMenu from "antd/lib/menu/SubMenu";
+import React, { useEffect, useState } from "react";
 import useFetch, { useFetchObject } from "../../../../services/Hooks/useFetch";
 import { SvgFire } from "../../../blocks/SvgIcon/SvgIcon";
 import Contents from "../Contents";
+import ReactDOM from 'react-dom';
+import MediaPlayer from "../../../blocks/MediaPlayer/MediaPlayer";
 
 
 export default function Favorite() {
 
     const { done: indexDone, data: indexData } = useFetchObject('data/favorite/index.json')
     const { done: genreDone, data: genreData } = useFetchObject('data/favorite/genre.json')
-    const generateMenu = () => {
-        console.log(Object.keys(genreData))
-        // const keys = Object.keys(data)
-        for (const genreKey of Object.keys(genreData)) {
 
-        }
 
-        for (const indexKey of Object.keys(indexData)) {
 
-        }
-        // for (const key of Object.keys(data)) {
-
-        // }
-    }
-
-    if (indexDone && genreDone) {
-        generateMenu()
+    const setCurrent = (key) => {
+        ReactDOM.render(
+            indexData[key]['lang']['en']
+            , document.getElementById("content_header_title"))
+        
+        ReactDOM.render(
+            <MediaPlayer file={`data/favorite/files/${key}`} />
+            , document.getElementById("favorite_content_container"))
     }
 
     return (
@@ -43,8 +40,9 @@ export default function Favorite() {
                     Fight for all that is beautiful in the world
                 </p>
             }
-            title={'favor'}
             menu
+            siderDefaultCollapsed={false}
+            menuOnclick={setCurrent}
             menuContent={
                 indexDone && genreDone ?
                     <>
@@ -56,7 +54,7 @@ export default function Favorite() {
                                             Object.keys(indexData).map((i) => {
                                                 if (indexData[i]['genre'] === genre) {
                                                     return (
-                                                        <Menu.Item>
+                                                        <Menu.Item key={i}>
                                                             {indexData[i]['lang']['en']}
                                                         </Menu.Item>
                                                     );
@@ -72,6 +70,13 @@ export default function Favorite() {
                     :
                     <Spin />
             }
+            pureContent={
+                indexDone && genreDone ?
+                    <div id="favorite_content_container"></div>
+                    :
+                    <Spin />
+            }
+
         />
     );
 }
