@@ -8,81 +8,33 @@
 }
 
 .shape_scrolldown>div {
-    background-color: rgba(209, 209, 209, 0.5);
     display: flex;
     margin-bottom: 10px;
     position: relative;
     flex-direction: column;
     align-items: center;
-    padding: 5px 10px 0 10px;
     transition: all .3s ease-in-out;
-    border-radius: 10px 10px 100% 100%;
     z-index: 999;
     cursor: pointer;
 }
-.shape_scrolldown p{
+
+.shape_scrolldown p {
     transition: all .3s ease-in-out;
 }
 
-.shape_scrolldown>div:hover {
-    background-color: rgba(139, 139, 139, 0.5);
-}
-
 .shape_scrolldown>div>* {
-    /* width: 190px;
-    height: 120px; */
     color: #fff;
     border-color: #fff;
     background: rgba(0, 0, 0, 0);
     margin: 0px;
-    /* position: absolute !important; */
 }
-.shape_scrolldown svg{
+
+.shape_scrolldown svg {
     width: 50px;
     height: 50px;
     fill: white;
     margin-top: -10px;
 }
-
-/* .shape_scrolldown>div>i:nth-child(2) {
-    transform: scaleX(2);
-    padding-bottom: 20px;
-    margin-top: -25px;
-}
-
-.shape_scrolldown>div>i:nth-child(3) {
-    transform: scaleX(1.7);
-    bottom: 0;
-    position: absolute !important;
-}
-
-.shape_scrolldown_inner {
-    display: inline-block !important;
-    position: relative;
-    width: 66px;
-    height: 66px;
-    border-radius: 100%;
-    box-sizing: content-box
-}
-
-.shape_scrolldown_inner:before {
-    position: absolute;
-    content: '';
-    margin: auto;
-    width: calc(66px/3.5);
-    height: calc(66px/3.5);
-    border: 0.2rem solid;
-    border-top-left-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
-    border-right: none;
-    border-top: none;
-    top: 0;
-    bottom: calc(66px/8);
-    left: 0;
-    right: 0;
-    transform: rotate(-45deg);
-    box-sizing: content-box
-} */
 
 .shape_scrolldown {
     -webkit-animation-name: bounce;

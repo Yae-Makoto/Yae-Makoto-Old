@@ -1,10 +1,54 @@
-@import '~antd/dist/antd.less';
-@primary-color: pink;
-@layout-body-background: #f0f2f5;
-@layout-header-background: white;
-@layout-header-height: 64px;
-@layout-header-padding: 0px;
-@layout-header-color: rgb(189, 114, 127);
-@layout-footer-padding: 24px 50px;
-@layout-footer-background: @layout-body-background;
-@layout-sider-background: @layout-header-background;
+@import './theme.less';
+
+.App {
+    text-align: center;
+}
+
+
+/* settings for all */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: contain;
+}
+
+
+/* scrollbar */
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: @YM-scroll-fg @YM-scroll-bg;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: @YM-scroll-bg;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: @YM-scroll-fg;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+}
+
+
+
+/* z-index 999 */
+
+.top {
+    z-index: 999;
+}
+
+.top.wrapper>div {
+    z-index: 999;
+}
+
+.none {
+    opacity: 0;
+}

@@ -3,18 +3,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Animator, batch, Fade, MoveIn, Sticky, Zoom } from "react-scroll-motion";
 import { scrollToBottom, scrollToTop } from "../../../services/Helper/ScrollHelper";
 import TrueOrFalse from "../../../services/Helper/TrueOrFalse";
-import useWindowDimension from "../../../services/Hooks/useWindowDimension";
 import { ButtonScrollDown } from "../../blocks/Buttons/ButtonScrollDown";
 import FlipCard from "../../blocks/FlipCard/FlipCard";
 import { SvgBook, SvgHeart, SvgMedal, SvgUser } from "../../blocks/SvgIcon/SvgIcon";
 import Template from "../Template";
-import bg1 from './bg1.webp';
-import bg2 from './bg2.webp';
-import './Cover.css'
+import './Cover.less';
 
 export default function Cover() {
 
-    const { height, width } = useWindowDimension();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -35,14 +31,11 @@ export default function Cover() {
                 <>
                     <Animator animation={batch(Sticky(), Fade(), Zoom(2, 1))}>
                         <div className='cover_img'>
-                            {height > width ?
-                                <img src={bg2} alt="Image load failed" />
-                                :
-                                <img src={bg1} alt="Image load failed" />}
+                            <img src="data/cover.webp" alt="Image load failed" />
                         </div>
                     </Animator>
                     <div className="top wrapper">
-                        <Animator animation={batch(Sticky(), Fade())}>
+                        <Animator animation={batch(Fade())}>
                             <ButtonScrollDown />
                         </Animator>
                     </div>

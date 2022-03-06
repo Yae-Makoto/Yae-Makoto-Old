@@ -1,3 +1,5 @@
+@import '../../../theme.less';
+
 .content_cover {
     width: 100vw;
     height: 100vh;
@@ -39,6 +41,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -48,6 +51,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -63,6 +67,12 @@
     overflow-x: hidden;
     text-overflow: ellipsis;
     height: 100vh;
+}
+
+.content_sider svg{
+    margin-left: -20px;
+    margin-right: 10px;
+    opacity: .5;
 }
 
 .header {
@@ -81,27 +91,24 @@
     margin: 0 20px;
 }
 
-.header .svg {
-    fill: pink;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-}
+// .header .svg {
+//     fill: @YM-theme-color-0;
+//     transition: all .3s ease-in-out;
+//     cursor: pointer;
+// }
 
 .header svg {
     height: 30px;
     width: 30px;
 }
 
-.header .svg:hover {
-    fill: rgb(219, 137, 151);
-}
-
 .header h1 {
     margin: 0px;
-    color: pink;
+    color: @YM-theme-color-0;
     font-size: 30px;
     font-weight: lighter;
-    max-width: 50vw;
+    max-width: calc(100% - 200px);
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 60px;
 }

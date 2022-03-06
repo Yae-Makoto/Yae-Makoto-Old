@@ -1,6 +1,8 @@
+@import '../../../theme.less';
+
 .button {
-    background-color: white;
-    fill: pink;
+    background-color: @YM-theme-color-1;
+    fill: @YM-theme-color-0;
     width: 45px;
     height: 45px;
     transition: all .3s ease-in-out;
@@ -20,13 +22,13 @@
 }
 
 .button_outlined {
-    border: 1px solid pink;
+    border: 1px solid @YM-theme-color-0;
 }
 
 .button:hover,
 .button_active {
-    fill: white;
-    background-color: pink;
+    fill: @YM-theme-color-1;
+    background-color: @YM-theme-color-0;
 }
 
 .button svg {

@@ -1,16 +1,12 @@
-import { Animator, batch, Fade, Sticky } from 'react-scroll-motion';
-import Template from '../Template';
-import './Contents.css';
-import Layout, { Header, Content, Footer } from 'antd/lib/layout/layout';
+import Layout, { Content, Header } from 'antd/lib/layout/layout';
 import Sider from 'antd/lib/layout/Sider';
 import { useEffect, useState } from 'react';
+import { Animator, batch, Fade } from 'react-scroll-motion';
 import { scrollToBottom, scrollToTop } from '../../../services/Helper/ScrollHelper';
-import { Menu, Spin } from 'antd';
-import { SvgMenu } from '../../blocks/SvgIcon/SvgIcon';
 import { ButtonBack, ButtonMenu } from '../../blocks/Buttons/Buttons';
-import { ButtonScrollDown } from '../../blocks/Buttons/ButtonScrollDown';
-import './Markdown.css';
-import ProLayout, { PageLoading } from '@ant-design/pro-layout';
+import Template from '../Template';
+import './Contents.less';
+
 export default function Contents(props) {
 
     const coverIcon = props.coverIcon;
@@ -22,9 +18,8 @@ export default function Contents(props) {
     const pureContent = props.pureContent;
 
     const menuContent = props.menuContent;
-    const menuOnclick = props.menuOnclick;
 
-    const siderDefaultCollapsed = props.siderDefaultCollapsed;
+    const siderDefaultCollapsed = props.siderDefaultCollapsed === true ? true : false;
 
     const [siderCollapes, setSiderCollapes] = useState(siderDefaultCollapsed);
 
@@ -32,7 +27,7 @@ export default function Contents(props) {
         scrollToTop('auto');
         const timer = setTimeout(() => {
             scrollToBottom();
-        }, 6000);
+        }, 3900);
         return () => clearTimeout(timer);
     }, [props])
 
@@ -40,7 +35,7 @@ export default function Contents(props) {
         <Template
             className='contents'
             page1={
-                <Animator animation={batch(Sticky(), Fade())}>
+                <Animator animation={batch(Fade())}>
                     <div className='content_cover'>
                         {coverIcon}
                         <br></br><br></br>
@@ -49,20 +44,19 @@ export default function Contents(props) {
                 </Animator>
             }
             page2={
-                <Animator animation={batch(Sticky(), Fade())}>
+                <Animator animation={batch(Fade())}>
                     <Layout className='content_container'>
                         <Sider trigger={null} collapsible
                             collapsed={siderCollapes}
                             collapsedWidth={0}
                             defaultCollapsed={siderDefaultCollapsed}>
-                            <Menu mode="inline" defaultSelectedKeys={['1']} className="content_sider" onClick={(item) => menuOnclick(item.key)}>
-                                {menuContent}
-                            </Menu>
+                            {menuContent}
+                            
                         </Sider>
                         <Layout>
                             <Header>
                                 <div className='header'>
-                                    <ButtonMenu none={!menu} round outlined active onClick={() => setSiderCollapes(pre => !pre)} />
+                                    <ButtonMenu init={!siderDefaultCollapsed} none={!menu} round outlined active onClick={() => setSiderCollapes(pre => !pre)} />
                                     <h1 id="content_header_title">{title}</h1>
                                     <ButtonBack round outlined />
                                 </div>

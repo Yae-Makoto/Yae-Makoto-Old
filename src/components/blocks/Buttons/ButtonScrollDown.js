@@ -7,7 +7,6 @@ export function ButtonScrollDown(props) {
 
     const [ins, setIns] = useState(0);
 
-    console.log(scroll)
     return (
         <div className='shape_scrolldown'>
             <div onMouseEnter={() => setIns(1)} onMouseLeave={() => setIns(0)}

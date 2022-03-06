@@ -1,8 +1,22 @@
 
+import { Menu, Spin } from "antd";
+import ReactDOM from 'react-dom';
+import { useFetchObject } from "../../../../services/Hooks/useFetch";
+import Markdown from "../../../blocks/Markdown/Markdown";
 import { SvgTools } from "../../../blocks/SvgIcon/SvgIcon";
 import Contents from "../Contents";
 
+
 export default function Works() {
+    const { done: indexDone, data: indexData } = useFetchObject('data/works/index.json')
+    const setCurrent = (key, title) => {
+        ReactDOM.render(
+            <Markdown url={`data/works/files/${key}`} />
+            , document.getElementById("md_content_container"));
+        ReactDOM.render(
+            title
+            , document.getElementById("content_header_title"))
+    }
     return (
         <Contents
             coverIcon={<SvgTools />}
@@ -19,6 +33,25 @@ export default function Works() {
             }
             title={'work'}
             menu
+            menuOnclick={setCurrent}
+            menuContent={
+                indexDone ?
+                    <Menu mode="inline" defaultSelectedKeys={['1']} className="content_sider">
+                        {
+                            indexData.map((f) =>
+
+                                <Menu.Item key={f.name} onClick={() => setCurrent(f.name, f.title)}>
+                                    {f.title}
+                                </Menu.Item>
+                            )
+                        }
+                    </Menu>
+                    :
+                    <Spin />
+            }
+            pureContent={
+                <div id="md_content_container"></div>
+            }
         />
     );
 }

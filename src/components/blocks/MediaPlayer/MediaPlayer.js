@@ -1,15 +1,15 @@
-
 import { useEffect, useRef, useState } from 'react';
 import videojs from "video.js";
 import './MediaPlayer.css';
-import "./Video.css";
+import "./VideoJs.less";
+
 export default function MediaPlayer(props) {
 
     const [file, setFile] = useState(props.file);
 
     const videoRef = useRef(null);
     const playerRef = useRef(null);
-    const options = { // lookup the options in the docs for more options
+    const options = {
         autoplay: true,
         controls: true,
         responsive: true,

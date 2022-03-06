@@ -1,12 +1,12 @@
 
 import { Menu, Spin } from "antd";
 import SubMenu from "antd/lib/menu/SubMenu";
-import React, { useEffect, useState } from "react";
-import useFetch, { useFetchObject } from "../../../../services/Hooks/useFetch";
-import { SvgFire } from "../../../blocks/SvgIcon/SvgIcon";
-import Contents from "../Contents";
+import React from "react";
 import ReactDOM from 'react-dom';
+import { useFetchObject } from "../../../../services/Hooks/useFetch";
 import MediaPlayer from "../../../blocks/MediaPlayer/MediaPlayer";
+import { SvgFire, SvgMp3, SvgMp4 } from "../../../blocks/SvgIcon/SvgIcon";
+import Contents from "../Contents";
 
 
 export default function Favorite() {
@@ -14,13 +14,10 @@ export default function Favorite() {
     const { done: indexDone, data: indexData } = useFetchObject('data/favorite/index.json')
     const { done: genreDone, data: genreData } = useFetchObject('data/favorite/genre.json')
 
-
-
     const setCurrent = (key) => {
         ReactDOM.render(
             indexData[key]['lang']['en']
             , document.getElementById("content_header_title"))
-        
         ReactDOM.render(
             <MediaPlayer file={`data/favorite/files/${key}`} />
             , document.getElementById("favorite_content_container"))
@@ -41,11 +38,11 @@ export default function Favorite() {
                 </p>
             }
             menu
-            siderDefaultCollapsed={false}
             menuOnclick={setCurrent}
             menuContent={
                 indexDone && genreDone ?
-                    <>
+                    <Menu mode="inline" defaultSelectedKeys={[Object.keys(indexData)[0]]} className="content_sider"
+                        defaultOpenKeys={[Object.keys(genreData)[0]]}>
                         {
                             Object.keys(genreData).map(
                                 (genre) =>
@@ -54,7 +51,9 @@ export default function Favorite() {
                                             Object.keys(indexData).map((i) => {
                                                 if (indexData[i]['genre'] === genre) {
                                                     return (
-                                                        <Menu.Item key={i}>
+                                                        <Menu.Item key={i} onClick={() => setCurrent(i)} icon={
+                                                            i.endsWith('mp4') ? <SvgMp4 /> : i.endsWith('mp3') ? <SvgMp3 /> : <></>
+                                                        }>
                                                             {indexData[i]['lang']['en']}
                                                         </Menu.Item>
                                                     );
@@ -66,13 +65,18 @@ export default function Favorite() {
                                     </SubMenu>
                             )
                         }
-                    </>
+                    </Menu>
                     :
                     <Spin />
             }
+            title={
+                indexDone && genreDone ? indexData[Object.keys(indexData)[0]]['lang']['en'] : ""
+            }
             pureContent={
                 indexDone && genreDone ?
-                    <div id="favorite_content_container"></div>
+                    <div id="favorite_content_container">
+                        <MediaPlayer file={`data/favorite/files/${Object.keys(indexData)[0]}`} />
+                    </div>
                     :
                     <Spin />
             }

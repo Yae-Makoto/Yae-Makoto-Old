@@ -1,13 +1,9 @@
 
-import { Spin } from "antd";
-import { marked } from "marked";
-import useFetch from "../../../../services/Hooks/useFetch";
+import Markdown from "../../../blocks/Markdown/Markdown";
 import { SvgSnow } from "../../../blocks/SvgIcon/SvgIcon";
 import Contents from "../Contents";
 
 export default function Self() {
-
-    const { done, data } = useFetch('data/self/me.md')
 
     return (
 
@@ -25,11 +21,7 @@ export default function Self() {
                 </p>
             }
             pureContent={
-                done ?
-                    <div className="markdown" dangerouslySetInnerHTML={{ __html: marked.parse(data) }}>
-                    </div>
-                    :
-                    <Spin />
+                <Markdown url='data/self/me.md' />
             }
             siderDefaultCollapsed={true}
         />

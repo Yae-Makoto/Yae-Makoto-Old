@@ -1,17 +1,17 @@
-
-import './Buttons.css';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { SvgBack, SvgMenu } from "../SvgIcon/SvgIcon";
-import NotImplemented from "../../../services/Helper/NotImplemented";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import NotImplemented from "../../../services/Helper/NotImplemented";
+import { SvgBack, SvgMenu } from "../SvgIcon/SvgIcon";
+import './Buttons.less';
 
 function Buttons(props) {
 
     const onClick = props.onClick;
     const active = props.active;
     const none = props.none;
+    const init = props.init === true ? true : false;
 
-    const [isActive, setIsActive] = useState(false)
+    const [isActive, setIsActive] = useState(init)
 
     const click = () => {
         if (active) setIsActive(pre => !pre);

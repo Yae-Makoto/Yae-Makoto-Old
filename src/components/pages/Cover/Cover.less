@@ -1,21 +1,9 @@
+@import '../../../theme.less';
+
 .cover_page,
 .cover_img {
     height: 100vh;
     overflow: hidden;
-}
-
-.cover_img {
-    -webkit-animation-name: breathe;
-    animation-name: breathe;
-    -webkit-transform-origin: center bottom;
-    -ms-transform-origin: center bottom;
-    transform-origin: center bottom;
-    -webkit-animation-duration: 11s;
-    animation-duration: 11s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
 }
 
 .cover_img img {
@@ -23,30 +11,6 @@
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-}
-
-@-webkit-keyframes breathe {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .7;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes breathe {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .7;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .cover_page {
@@ -61,6 +25,7 @@
     font-size: 10vh;
     margin: 0px;
     width: 100vw;
+    color: @YM-theme-color-0;
 }
 
 .cover_page>*:nth-child(2) {
@@ -83,21 +48,23 @@
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face {
-    border: 2px solid pink;
+    border: 2px solid @YM-theme-color-0;
     width: 20vh;
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: .5;
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face_front {
-    background-color: pink;
+    background-color: @YM-theme-color-0;
+    opacity: .5;
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face_back>div {
-    background-color: pink;
-    color: white;
+    background-color: @YM-theme-color-0;
+    color: @YM-theme-color-1;
     width: 95%;
     height: 95%;
     display: flex;
@@ -107,7 +74,7 @@
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face svg {
-    fill: white;
+    fill: @YM-theme-color-1;
     width: 10vh;
     height: 10vh;
 }
