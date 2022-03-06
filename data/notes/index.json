@@ -2,5 +2,9 @@
     {
         "name": "example.md",
         "title": "example"
+    },
+    {
+        "name": "example1.md",
+        "title": "example1"
     }
 ]
