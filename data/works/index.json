@@ -1,14 +1,5 @@
-[
-    {
-        "name": "example.md",
-        "title": "example"
-    },
-    {
-        "name": "example1.md",
-        "title": "example1"
-    },
-    {
-        "name": "example note.md",
-        "title": "example note"
-    }
-]
+{
+    "example.md": "example",
+    "example1.md": "example1",
+    "example2.md": "example2"
+}
