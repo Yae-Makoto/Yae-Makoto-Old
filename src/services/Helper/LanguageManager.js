@@ -12,9 +12,9 @@ function setCookie(key, value) {
 export function languageInit() {
     if (getCookie('lang')) {
         return getCookie('lang');
-        
+
     } else {
-        setCookie('lang','en');
+        setCookie('lang', 'en');
         return 'en';
     }
 }
@@ -30,5 +30,5 @@ export function languageChange(bln, callback) {
 }
 
 export function language() {
-    // return getCookie('lang');
+    return getCookie('lang');
 }

@@ -10,7 +10,7 @@ export default function MediaPlayer(props) {
     const videoRef = useRef(null);
     const playerRef = useRef(null);
     const options = {
-        autoplay: true,
+        // autoplay: true,
         controls: true,
         responsive: true,
         sources: [{

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Animator, batch, Fade } from 'react-scroll-motion';
 import { scrollToBottom, scrollToTop } from '../../../services/Helper/ScrollHelper';
 import { ButtonBack, ButtonMenu } from '../../blocks/Buttons/Buttons';
+import Title, { TitleSimple } from '../../blocks/Title/Title';
 import Template from '../Template';
 import './Contents.less';
 
@@ -59,14 +60,16 @@ export default function Contents(props) {
                             <Header>
                                 <div className='header'>
                                     <ButtonMenu init={!siderDefaultCollapsed} none={!menu} round outlined active onClick={() => setSiderCollapes(pre => !pre)} />
-                                    <Popover content={<div id="content_header_title_tooltip">{titleTooltip}</div>} trigger="hover" placement="bottom"  >
-                                        <h1 id="content_header_title">{title}</h1>
-                                    </Popover>
+                                    <div id="content_title_container">
+                                        {title}
+                                    </div>
                                     <ButtonBack round outlined />
                                 </div>
                             </Header>
                             <Content>
-                                {pureContent}
+                                <div id="content_block">
+                                    {pureContent}
+                                </div>
                             </Content>
                         </Layout>
                     </Layout>

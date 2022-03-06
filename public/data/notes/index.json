@@ -1,6 +1,3 @@
-[
-    {
-        "name": "example.md",
-        "title": "example"
-    }
-]
+{
+    "example.md": "example"
+}
