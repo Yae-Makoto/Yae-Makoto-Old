@@ -16,6 +16,9 @@ export default function Works() {
         ReactDOM.render(
             title
             , document.getElementById("content_header_title"))
+        ReactDOM.render(
+            title
+            , document.getElementById("content_header_title_tooltip"))
     }
     return (
         <Contents

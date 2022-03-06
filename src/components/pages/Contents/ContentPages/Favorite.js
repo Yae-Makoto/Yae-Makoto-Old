@@ -1,8 +1,9 @@
 
-import { Menu, Spin } from "antd";
+import { Menu, Spin, Switch } from "antd";
 import SubMenu from "antd/lib/menu/SubMenu";
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from 'react-dom';
+import { languageChange, languageInit } from "../../../../services/Helper/LanguageManager";
 import { useFetchObject } from "../../../../services/Hooks/useFetch";
 import MediaPlayer from "../../../blocks/MediaPlayer/MediaPlayer";
 import { SvgFire, SvgMp3, SvgMp4 } from "../../../blocks/SvgIcon/SvgIcon";
@@ -13,15 +14,20 @@ export default function Favorite() {
 
     const { done: indexDone, data: indexData } = useFetchObject('data/favorite/index.json')
     const { done: genreDone, data: genreData } = useFetchObject('data/favorite/genre.json')
+    const [lang, setLang] = useState(languageInit());
 
     const setCurrent = (key) => {
         ReactDOM.render(
-            indexData[key]['lang']['en']
+            indexData[key]['lang'][lang]
             , document.getElementById("content_header_title"))
+        ReactDOM.render(
+            indexData[key]['lang'][lang]
+            , document.getElementById("content_header_title_tooltip"))
         ReactDOM.render(
             <MediaPlayer file={`data/favorite/files/${key}`} />
             , document.getElementById("favorite_content_container"))
     }
+
 
     return (
         <Contents
@@ -41,12 +47,17 @@ export default function Favorite() {
             menuOnclick={setCurrent}
             menuContent={
                 indexDone && genreDone ?
-                    <Menu mode="inline" defaultSelectedKeys={[Object.keys(indexData)[0]]} className="content_sider"
+                    <Menu mode="inline"
+                        defaultSelectedKeys={[Object.keys(indexData)[0]]}
+                        className="content_sider"
                         defaultOpenKeys={[Object.keys(genreData)[0]]}>
+                        <div className="lang_switch">
+                            <Switch checkedChildren="Chinese" unCheckedChildren="English" checked={lang === 'zh'} onClick={(l) => { languageChange(l, setLang) }} />
+                        </div>
                         {
                             Object.keys(genreData).map(
                                 (genre) =>
-                                    <SubMenu key={genre} title={genreData[genre]['en']}>
+                                    <SubMenu key={genre} title={genreData[genre][lang]}>
                                         {
                                             Object.keys(indexData).map((i) => {
                                                 if (indexData[i]['genre'] === genre) {
@@ -54,7 +65,7 @@ export default function Favorite() {
                                                         <Menu.Item key={i} onClick={() => setCurrent(i)} icon={
                                                             i.endsWith('mp4') ? <SvgMp4 /> : i.endsWith('mp3') ? <SvgMp3 /> : <></>
                                                         }>
-                                                            {indexData[i]['lang']['en']}
+                                                            {indexData[i]['lang'][lang]}
                                                         </Menu.Item>
                                                     );
                                                 } else {
@@ -69,9 +80,8 @@ export default function Favorite() {
                     :
                     <Spin />
             }
-            title={
-                indexDone && genreDone ? indexData[Object.keys(indexData)[0]]['lang']['en'] : ""
-            }
+            title={indexDone && genreDone ? indexData[Object.keys(indexData)[0]]['lang'][lang] : ""}
+            titleTooltip={indexDone && genreDone ? indexData[Object.keys(indexData)[0]]['lang'][lang] : ""}
             pureContent={
                 indexDone && genreDone ?
                     <div id="favorite_content_container">

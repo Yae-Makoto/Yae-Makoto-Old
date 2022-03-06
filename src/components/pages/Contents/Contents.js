@@ -1,3 +1,4 @@
+import { Popover } from 'antd';
 import Layout, { Content, Header } from 'antd/lib/layout/layout';
 import Sider from 'antd/lib/layout/Sider';
 import { useEffect, useState } from 'react';
@@ -14,6 +15,7 @@ export default function Contents(props) {
 
     const menu = props.menu;
     const title = props.title;
+    const titleTooltip = props.titleTooltip;
 
     const pureContent = props.pureContent;
 
@@ -51,13 +53,15 @@ export default function Contents(props) {
                             collapsedWidth={0}
                             defaultCollapsed={siderDefaultCollapsed}>
                             {menuContent}
-                            
+
                         </Sider>
                         <Layout>
                             <Header>
                                 <div className='header'>
                                     <ButtonMenu init={!siderDefaultCollapsed} none={!menu} round outlined active onClick={() => setSiderCollapes(pre => !pre)} />
-                                    <h1 id="content_header_title">{title}</h1>
+                                    <Popover content={<div id="content_header_title_tooltip">{titleTooltip}</div>} trigger="hover" placement="bottom"  >
+                                        <h1 id="content_header_title">{title}</h1>
+                                    </Popover>
                                     <ButtonBack round outlined />
                                 </div>
                             </Header>
