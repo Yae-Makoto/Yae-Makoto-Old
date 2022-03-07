@@ -55,7 +55,7 @@ export default function Cover() {
                                 <FlipCard
                                     className='cover_page_index'
                                     front={<SvgUser />}
-                                    back={<div>My<br></br>Self</div>}
+                                    back={<div>My Self</div>}
                                     onClick={() => navigate('/self')}
                                 />
                             </div>
@@ -63,7 +63,7 @@ export default function Cover() {
                                 <FlipCard
                                     className='cover_page_index'
                                     front={<SvgHeart />}
-                                    back={<div>My<br></br>Favorite</div>}
+                                    back={<div>My Favorite</div>}
                                     onClick={() => navigate('/favorite')}
                                 />
                             </div>
@@ -75,7 +75,7 @@ export default function Cover() {
                                 <FlipCard
                                     className='cover_page_index'
                                     front={<SvgBook />}
-                                    back={<div>My<br></br>Notes</div>}
+                                    back={<div>My Notes</div>}
                                     onClick={() => navigate('/notes')}
                                 />
                             </div>
@@ -83,7 +83,7 @@ export default function Cover() {
                                 <FlipCard
                                     className='cover_page_index'
                                     front={<SvgMedal />}
-                                    back={<div>My<br></br>Works</div>}
+                                    back={<div>My Works</div>}
                                     onClick={() => navigate('/works')}
                                 />
                             </div>
