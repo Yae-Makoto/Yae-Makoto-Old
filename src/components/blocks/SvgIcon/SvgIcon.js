@@ -12,6 +12,7 @@ import { ReactComponent as PullDown } from './svg/pull_down.svg';
 import { ReactComponent as Book } from './svg/read.svg';
 import { ReactComponent as Snow } from './svg/snow.svg';
 import { ReactComponent as Tools } from './svg/tools.svg';
+import { ReactComponent as Logo } from './svg/logo.svg';
 
 export function SvgUser() {
     return <User />
@@ -67,4 +68,8 @@ export function SvgMp3() {
 
 export function SvgMp4() {
     return <Mp4 />
+};
+
+export function SvgLogo() {
+    return <Logo />
 };

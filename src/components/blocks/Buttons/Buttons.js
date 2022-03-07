@@ -33,8 +33,6 @@ function Buttons(props) {
     );
 }
 
-
-
 export function ButtonBack(props) {
 
     const to = props.to;

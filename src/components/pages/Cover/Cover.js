@@ -5,7 +5,7 @@ import { scrollToBottom, scrollToTop } from "../../../services/Helper/ScrollHelp
 import TrueOrFalse from "../../../services/Helper/TrueOrFalse";
 import { ButtonScrollDown } from "../../blocks/Buttons/ButtonScrollDown";
 import FlipCard from "../../blocks/FlipCard/FlipCard";
-import { SvgBook, SvgHeart, SvgMedal, SvgUser } from "../../blocks/SvgIcon/SvgIcon";
+import { SvgBook, SvgHeart, SvgLogo, SvgMedal, SvgUser } from "../../blocks/SvgIcon/SvgIcon";
 import Template from "../Template";
 import './Cover.less';
 
@@ -31,7 +31,8 @@ export default function Cover() {
                 <>
                     <Animator animation={batch(Sticky(), Fade(), Zoom(2, 1))}>
                         <div className='cover_img'>
-                            <img src="data/cover.webp" alt="Image load failed" />
+                            <SvgLogo />
+                            {/* <img src="data/cover.webp" alt="Image load failed" /> */}
                         </div>
                     </Animator>
                     <div className="top wrapper">

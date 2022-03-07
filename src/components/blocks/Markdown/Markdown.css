@@ -1,17 +1,29 @@
-.markdown{
+.markdown {
     text-align: start;
-    padding: 10vmin;
     height: calc(100vh - 64px);
     overflow-y: scroll;
+    width: 100%;
+    padding: 5vw;
+}
+.markdown>*{
+    max-width: -webkit-fill-available;
 }
 
-img.head{
-    width: 250px;
-    height: 250px;
+img.head {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     float: right;
 }
 
-.markdown h1{
-    font-size: 50px;
+.markdown h1 {
+    font-size: 38px;
+}
+
+.markdown h2 {
+    font-size: 29px;
+}
+
+.markdown h3 {
+    font-size: 23px;
 }

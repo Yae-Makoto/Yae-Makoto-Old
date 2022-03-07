@@ -4,6 +4,8 @@
 .cover_img {
     height: 100vh;
     overflow: hidden;
+    align-items: center;
+    display: flex;
 }
 
 .cover_img img {
@@ -11,6 +13,12 @@
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+}
+
+.cover_img svg {
+    height: 50vmin;
+    width: 50vmin;
+    margin-bottom: 15vmin;
 }
 
 .cover_page {
@@ -25,7 +33,7 @@
     font-size: 10vh;
     margin: 0px;
     width: 100vw;
-    color: @YM-theme-color-0;
+    color: @YM-light;
 }
 
 .cover_page>*:nth-child(2) {
@@ -48,22 +56,20 @@
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face {
-    border: 2px solid @YM-theme-color-0;
+    border: 2px solid @YM-light;
     width: 20vh;
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .5;
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face_front {
-    background-color: @YM-theme-color-0;
-    opacity: .5;
+    background-color: @YM-light;
 }
 
 .cover_page_index_block>.cover_page_index .flip_card_face_back>div {
-    background-color: @YM-theme-color-0;
+    background-color: @YM-light;
     color: @YM-theme-color-1;
     width: 95%;
     height: 95%;

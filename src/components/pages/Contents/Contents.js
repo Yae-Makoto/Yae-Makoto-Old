@@ -56,7 +56,7 @@ export default function Contents(props) {
                             {menuContent}
 
                         </Sider>
-                        <Layout>
+                        <Layout className='content_content'>
                             <Header>
                                 <div className='header'>
                                     <ButtonMenu init={!siderDefaultCollapsed} none={!menu} round outlined active onClick={() => setSiderCollapes(pre => !pre)} />

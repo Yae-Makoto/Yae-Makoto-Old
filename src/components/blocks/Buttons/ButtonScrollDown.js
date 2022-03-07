@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SvgPullDown } from '../SvgIcon/SvgIcon';
-import './ButtonScrollDown.css';
+import './ButtonScrollDown.less';
 
 export function ButtonScrollDown(props) {
     const scroll = props.scroll ? props.scroll : document.documentElement.scrollHeight - document.documentElement.clientHeight;
