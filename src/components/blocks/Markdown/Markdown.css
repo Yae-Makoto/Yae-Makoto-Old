@@ -1,3 +1,7 @@
+.md_content_container {
+    width: 100%;
+}
+
 .markdown {
     text-align: start;
     height: calc(100vh - 64px);
@@ -5,7 +9,8 @@
     width: 100%;
     padding: 5vw;
 }
-.markdown>*{
+
+.markdown>* {
     max-width: -webkit-fill-available;
 }
 
