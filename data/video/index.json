@@ -1,0 +1,98 @@
+[
+    {
+        "name": {
+            "en": "Genshin Impact",
+            "zh": "原神"
+        },
+        "file": [
+            {
+                "file": "raiden_cd.mp4",
+                "name": {
+                    "en": "Raiden Shogun: Judgment of Euthymia",
+                    "zh": "雷電将軍：浄土裁断"
+                }
+            },
+            {
+                "file": "lantern_rite_1st.mp4",
+                "name": {
+                    "en": "Lantern Rite 2021: Mingxiao Convergence",
+                    "zh": "海灯节2021：明霄升海平"
+                }
+            },
+            {
+                "file": "lantern_rite_2nd.mp4",
+                "name": {
+                    "en": "Lantern Rite 2022: Age of Flowing Hues",
+                    "zh": "海灯节2022：岁华流彩"
+                }
+            },
+            {
+                "file": "genshin.mp4",
+                "name": {
+                    "en": "Genshin Impact",
+                    "zh": "原神"
+                }
+            }
+        ]
+    },
+    {
+        "name": {
+            "en": "Honkai Impact 3rd",
+            "zh": "崩坏三"
+        },
+        "file": [
+            {
+                "file": "Will of the Herrscher.mp4",
+                "name": {
+                    "en": "Will of the Herrscher",
+                    "zh": "女王降临"
+                }
+            },
+            {
+                "file": "Final Lesson.mp4",
+                "name": {
+                    "en": "Final Lesson",
+                    "zh": "最后一课"
+                }
+            },
+            {
+                "file": "Awaken.mp4",
+                "name": {
+                    "en": "Awaken",
+                    "zh": "觉醒"
+                }
+            },
+            {
+                "file": "Meteoric Salvation.mp4",
+                "name": {
+                    "en": "Meteoric Salvation",
+                    "zh": "天穹流星"
+                }
+            },
+            {
+                "file": "Lament of the Fallen.mp4",
+                "name": {
+                    "en": "Lament of the Fallen",
+                    "zh": "罪人挽歌"
+                }
+            },
+            {
+                "file": "Shattered Samsara.mp4",
+                "name": {
+                    "en": "Shattered Samsara",
+                    "zh": "渡尘"
+                }
+            },
+            {
+                "file": "Everlasting Flames.mp4",
+                "name": {
+                    "en": "Everlasting Flames",
+                    "zh": "薪炎永燃"
+                }
+            }
+        ]
+    },
+    {
+        "file": []
+    }
+]
