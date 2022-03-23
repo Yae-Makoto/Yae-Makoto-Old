@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease-in-out;
+    z-index: 599;
+    opacity: .8;
+    cursor: pointer;
+    fill: white !important;
+    color: white !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    opacity: 1;
+}

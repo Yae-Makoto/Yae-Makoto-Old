@@ -1,0 +1,22 @@
+.content-cover {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-cover svg {
+    fill: black;
+    opacity: .6;
+    width: 10vh;
+    height: 10vh;
+}
+
+.content-cover p {
+    margin: 0px;
+    font-size: 3vh;
+    font-weight: 200;
+    padding: 0 10vw;
+}

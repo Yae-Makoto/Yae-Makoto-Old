@@ -1,0 +1,120 @@
+.music-player {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-control {
+    width: 60vmin;
+    height: 60vmin;
+    min-width: 260px;
+    min-height: 260px;
+    border: 8px double;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.player-control-wrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.player-control-svg {
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    background: white;
+    padding: 5%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-control-svg svg {
+    width: 80%;
+    height: 80%;
+    transform: rotate(15deg);
+}
+
+.player-control-svg svg g {
+    transform: translate(-3px, 1px);
+}
+
+.player-control-svg svg * {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 0;
+    animation: dash 10s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.player-control-svg {
+    animation: rotate 15s linear infinite;
+}
+
+.player-control-wrapper.paused,
+.player-control-wrapper.paused .player-control-svg,
+.player-control-wrapper.paused .player-control-svg svg * {
+    animation-play-state: paused;
+}
+
+.player-control-wrapper.running,
+.player-control-wrapper.running .player-control-svg,
+.player-control-wrapper.running .player-control-svg svg * {
+    animation-play-state: running;
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dashoffset: 350;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dashoffset: 350;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

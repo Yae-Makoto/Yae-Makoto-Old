@@ -1,6 +1,7 @@
 
 import { createContext, useState } from "react";
-import { languageChange, languageInit } from "../Helper/LanguageManager";
+import { languageChange, languageInit } from "../Helper/CacheManager";
+import { Player } from "../Helper/Player";
 
 export const Context = createContext();
 
@@ -16,6 +17,10 @@ export default function ContextProvider({ children }) {
 
     const [markdownUrl, setMarkdownUrl] = useState("");
     const [mediaUrl, setMediaUrl] = useState("");
+    const [playlistId, setPlaylistId] = useState("");
+    
+    const [player] = useState(new Player());
+    
     return (
         <Context.Provider value={{
             lang,
@@ -27,6 +32,8 @@ export default function ContextProvider({ children }) {
             setContentTitleComplex,
             markdownUrl, setMarkdownUrl,
             mediaUrl, setMediaUrl,
+            playlistId, setPlaylistId,
+            player
         }}>
             {children}
         </Context.Provider>

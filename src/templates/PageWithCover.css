@@ -1,0 +1,35 @@
+.pwc-cover,
+.pwc-content {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pwc-cover {
+    z-index: 100;
+    background-color: white;
+}
+
+.pwc-content {
+    z-index: 99;
+    background-color: white;
+}
+
+.pwc-cover.enter {
+    opacity: 1;
+}
+
+.pwc-cover.enter-active {
+    opacity: 0;
+    transform: scale(3);
+    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.pwc-cover.enter-done {
+    opacity: 0;
+    display: none;
+}

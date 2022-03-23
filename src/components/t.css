@@ -1,0 +1,21 @@
+.ant-menu-submenu-selected>.ant-menu-submenu-title *,
+.ant-menu-submenu-active>.ant-menu-submenu-title * {
+    color: red !important;
+}
+
+.ant-menu-item-active {
+    color: red !important;
+}
+
+.ant-menu-item-selected {
+    background-color: red !important;
+    color: white !important;
+}
+
+.ant-menu-item-active.ant-menu-item-selected {
+    color: white !important;
+}
+
+.ant-menu-item-selected::after {
+    display: none !important;
+}

@@ -1,41 +1,32 @@
-@import '../../../theme.less';
-
-.shape_scrolldown {
-    z-index: 666;
-    display: flex;
+.cover-img {
     height: 100vh;
-    bottom: 0;
+    width: 100vw;
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
-.shape_scrolldown>div {
-    display: flex;
-    margin-bottom: 10px;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    transition: all .3s ease-in-out;
-    z-index: 999;
+.cover-img>div {
+    position: fixed;
+    height: 50vh;
+    width: 50vh;
+    margin-bottom: 10vmin;
     cursor: pointer;
 }
 
-.shape_scrolldown p {
-    transition: all .3s ease-in-out;
+.cover-img svg {
+    left: 0;
+    position: absolute;
+    height: 50vh;
+    width: 50vh;
 }
 
-.shape_scrolldown>div>* {
-    background: rgba(0, 0, 0, 0);
-    margin: 0px;
+.cover-img svg:nth-child(2) {
+    transform: scale(1.05);
+    opacity: .5;
 }
 
-.shape_scrolldown svg {
-    width: 50px;
-    height: 50px;
-    margin-top: -10px;
-}
-
-.shape_scrolldown {
+.cover-img {
     -webkit-animation-name: bounce;
     animation-name: bounce;
     -webkit-transform-origin: center bottom;
@@ -52,7 +43,6 @@
 }
 
 @-webkit-keyframes bounce {
-
     0%,
     2%,
     5.3%,
@@ -63,7 +53,6 @@
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
-
     4%,
     4.3% {
         -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
@@ -71,14 +60,12 @@
         -webkit-transform: translate3d(0, -30px, 0);
         transform: translate3d(0, -30px, 0);
     }
-
     7% {
         -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
         transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
         -webkit-transform: translate3d(0, -15px, 0);
         transform: translate3d(0, -15px, 0);
     }
-
     9% {
         -webkit-transform: translate3d(0, -4px, 0);
         transform: translate3d(0, -4px, 0);
@@ -86,7 +73,6 @@
 }
 
 @keyframes bounce {
-
     0%,
     2%,
     5.3%,
@@ -97,7 +83,6 @@
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
-
     4%,
     4.3% {
         -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
@@ -105,16 +90,48 @@
         -webkit-transform: translate3d(0, -30px, 0);
         transform: translate3d(0, -30px, 0);
     }
-
     7% {
         -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
         transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
         -webkit-transform: translate3d(0, -15px, 0);
         transform: translate3d(0, -15px, 0);
     }
-
     9% {
         -webkit-transform: translate3d(0, -4px, 0);
         transform: translate3d(0, -4px, 0);
     }
+}
+
+.cover-index {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 5vmin;
+}
+
+.cover-index .card>div:first-child {
+    width: 30vmin;
+    height: 30vmin;
+    max-width: 130px;
+    max-height: 130px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-index .card>div:nth-child(2) {
+    font-size: 20px;
+    margin-top: 1vmin;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.cover-index .card svg {
+    width: 70%;
+    height: 70%;
 }

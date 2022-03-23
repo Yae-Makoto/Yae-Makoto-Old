@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import NotImplemented from "../Helper/NotImplemented";
+import { NotImplemented } from "../Helper/Other";
 
-export default function useFetch(url, dataType = 'text', callback = NotImplemented) {
+export function useFetch(url, dataType = 'text', callback = NotImplemented) {
 
     const [data, setData] = useState(null);
     const [done, setDone] = useState(false);
@@ -25,7 +25,7 @@ export default function useFetch(url, dataType = 'text', callback = NotImplement
     return { done, data }
 }
 
-export function useFetchObject(url, callback = NotImplemented){
+export function useFetchObject(url, callback = NotImplemented) {
     return useFetch(url, 'json', callback);
 }
 
@@ -51,4 +51,8 @@ export function useKeepFetch(url, dataType = 'text', callback = NotImplemented) 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [url])
     return { done, data }
+}
+
+export function useKeepFetchObject(url, callback = NotImplemented) {
+    return useKeepFetch(url, 'json', callback);
 }

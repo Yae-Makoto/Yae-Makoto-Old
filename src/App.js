@@ -2,30 +2,42 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 import './Antd.less';
 import './App.less';
-import { Favorite } from './components/pages/Contents/ContentPages/MediaPages';
-import { Notes, Works } from './components/pages/Contents/ContentPages/MarkdownPages';
-import Self from './components/pages/Contents/ContentPages/Self';
-import Cover from './components/pages/Cover/Cover';
+import ThemeProvider from './services/Context/Theme';
+import 'antd/dist/antd.css';
+import Scrollbar from './components/Scrollbar';
+import Cover from './pages/Cover';
+import Info from './pages/Info';
 import ContextProvider from './services/Context/Context';
+import Settings from './components/Settings';
+import Note from './pages/Note';
+import Project from './pages/Project';
+import Music from './pages/Music';
+import Video from './pages/Video';
+import Test from './pages/Test';
 
 export default function App() {
 
     smoothscroll.polyfill();
 
     return (
-        <ContextProvider>
-            <div className="App">
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Cover />} />
-                        <Route path="/self" element={<Self />} />
-                        <Route path="/favorite" element={<Favorite />} />
-                        <Route path="/notes" element={<Notes />} />
-                        <Route path="/works" element={<Works />} />
-                        <Route path="*" />
-                    </Routes>
-                </BrowserRouter>
-            </div>
-        </ContextProvider>
+        <ThemeProvider>
+            <ContextProvider>
+                <div className="App">
+                    <BrowserRouter>
+                        <Routes>
+                            <Route path="/" element={<Cover />} />
+                            <Route path="/info" element={<Info />} />
+                            <Route path="/note" element={<Note />} />
+                            <Route path="/app" element={<Project />} />
+                            <Route path="/music" element={<Music />} />
+                            <Route path="/video" element={<Video />} />
+                            <Route path="*" element={<Test />} />
+                        </Routes>
+                    </BrowserRouter>
+                    <Settings />
+                </div>
+                <Scrollbar />
+            </ContextProvider>
+        </ThemeProvider>
     );
 }

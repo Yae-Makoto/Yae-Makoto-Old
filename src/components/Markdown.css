@@ -1,0 +1,38 @@
+#md_content_container {
+    width: 100%;
+}
+
+.markdown {
+    text-align: start;
+    height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 5vw;
+    padding-top: 70px;
+}
+
+.markdown>* {
+    max-width: -webkit-fill-available;
+}
+
+.head svg {
+    width: 300px;
+    height: 300px;
+    max-width: 80vw;
+    max-height: 80vw;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+
+.markdown h1 {
+    font-size: 38px;
+}
+
+.markdown h2 {
+    font-size: 29px;
+}
+
+.markdown h3 {
+    font-size: 23px;
+}

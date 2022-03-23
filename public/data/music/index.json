@@ -1,0 +1,63 @@
+[
+    {
+        "name": {
+            "en": "Genshin Impact",
+            "zh": "原神"
+        },
+        "file": [
+            {
+                "file": "Liyue.mp3",
+                "name": {
+                    "en": "Liyue",
+                    "zh": "璃月"
+                }
+            },
+            {
+                "file": "Rage Beneath the Mountains.mp3",
+                "name": {
+                    "en": "Rage Beneath the Mountains",
+                    "zh": "岩壑之崩"
+                }
+            },
+            {
+                "file": "Termination of Desires.mp3",
+                "name": {
+                    "en": "Termination of Desires",
+                    "zh": "何妄何执"
+                }
+            }
+        ]
+    },
+    {
+        "name": {
+            "en": "Honkai Impact 3rd",
+            "zh": "崩坏三"
+        },
+        "file": [
+            {
+                "file": "Nightglow.mp3",
+                "name": {
+                    "en": "Nightglow",
+                    "zh": "Nightglow"
+                }
+            },
+            {
+                "file": "Moon Halo.mp3",
+                "name": {
+                    "en": "Moon Halo",
+                    "zh": "Moon Halo"
+                }
+            },
+            {
+                "file": "Rubia.mp3",
+                "name": {
+                    "en": "Rubia",
+                    "zh": "Rubia"
+                }
+            }
+        ]
+    },
+    {
+        "file": []
+    }
+]

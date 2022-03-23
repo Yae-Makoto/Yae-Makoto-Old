@@ -1,0 +1,44 @@
+[
+    {
+        "color": "#f75e5f",
+        "name": {
+            "en": "Akai Shiromuku",
+            "zh": "赤色の白無垢"
+        }
+    },
+    {
+        "color": "#afdcec",
+        "name": {
+            "en": "Melancholy",
+            "zh": "犹豫蓝调"
+        }
+    },
+    {
+        "color": "#ffb3c6",
+        "name": {
+            "en": "Miss Pink Elf ♪",
+            "zh": "粉色妖精小姐 ♪"
+        }
+    },
+    {
+        "color": "#b99ac0",
+        "name": {
+            "en": "Princess",
+            "zh": "公主"
+        }
+    },
+    {
+        "color": "#86cfc6",
+        "name": {
+            "en": "Reawaken",
+            "zh": "觉醒"
+        }
+    },
+    {
+        "color": "#e9d3b5",
+        "name": {
+            "en": "Perseverance",
+            "zh": "坚如磐石"
+        }
+    }
+]
