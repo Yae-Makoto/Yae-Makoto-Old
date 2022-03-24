@@ -14,6 +14,7 @@ import Project from './pages/Project';
 import Music from './pages/Music';
 import Video from './pages/Video';
 import Test from './pages/Test';
+import FootPrint from './pages/FootPrint';
 
 export default function App() {
 
@@ -29,8 +30,11 @@ export default function App() {
                             <Route path="/info" element={<Info />} />
                             <Route path="/note" element={<Note />} />
                             <Route path="/app" element={<Project />} />
+
                             <Route path="/music" element={<Music />} />
                             <Route path="/video" element={<Video />} />
+
+                            <Route path="/footprint" element={<FootPrint />} />
                             <Route path="*" element={<Test />} />
                         </Routes>
                     </BrowserRouter>

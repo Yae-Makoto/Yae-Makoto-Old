@@ -1,7 +1,7 @@
 import Card from "../components/Card";
 import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { SvgBook, SvgFingerprint, SvgLogo, SvgMovie, SvgMusic, SvgStack } from "../components/SvgIcon/SvgIcon";
+import { SvgBook, SvgFingerprint, SvgFootprint, SvgLogo, SvgMovie, SvgMusic, SvgStack } from "../components/SvgIcon/SvgIcon";
 import coverConfig from "../config/cover.json";
 import { Context } from "../services/Context/Context";
 import { Theme } from "../services/Context/Theme";
@@ -41,8 +41,9 @@ export default function () {
             content={
                 <div className="cover-index">
                     <Card svg={<SvgFingerprint />} text={coverConfig[0][lang]} onClick={() => navigate('/info')} />
-                    {/* <Card svg={<SvgBook />} text={coverConfig[1][lang]} onClick={() => navigate('/note')} />
-                    <Card svg={<SvgStack />} text={coverConfig[2][lang]} onClick={() => navigate('/app')} /> */}
+                    <Card svg={<SvgFootprint />} text={coverConfig[5][lang]} onClick={() => navigate('/footprint')} />
+                    {/* <Card svg={<SvgBook />} text={coverConfig[1][lang]} onClick={() => navigate('/note')} /> */}
+                    <Card svg={<SvgStack />} text={coverConfig[2][lang]} onClick={() => navigate('/app')} />
                     <Card svg={<SvgMusic />} text={coverConfig[3][lang]} onClick={() => navigate('/music')} />
                     <Card svg={<SvgMovie />} text={coverConfig[4][lang]} onClick={() => navigate('/video')} />
                 </div>

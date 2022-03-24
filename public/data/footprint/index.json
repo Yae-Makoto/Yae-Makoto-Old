@@ -1,0 +1,92 @@
+[
+    {
+        "title": {
+            "en": "Birth",
+            "zh": "诞生"
+        },
+        "location": {
+            "en": "Fuzhou, China",
+            "zh": "中国·福州"
+        },
+        "content": {
+            "en": "Thank you, Mom and Dad, for giving me life.",
+            "zh": "谢谢老爸老妈给予了我生命。"
+        },
+        "time": "30/11/2000"
+    },
+    {
+        "title": {
+            "en": "Qionghe Primary School",
+            "zh": "琼河小学"
+        },
+        "location": {
+            "en": "Fuzhou, China",
+            "zh": "中国·福州"
+        },
+        "content": {
+            "en": "This school has now turned into dust and no longer exists...",
+            "zh": "这所学校如今已经化作尘埃，不复存在……"
+        },
+        "time": "2006 - 2012"
+    },
+    {
+        "title": {
+            "en": "Sanmu Secondary School",
+            "zh": "三牧中学"
+        },
+        "location": {
+            "en": "Fuzhou, China",
+            "zh": "中国·福州"
+        },
+        "content": {
+            "en": "I feel very fortunate that I used to studied with a group of talented young boys and girls.",
+            "zh": "我很庆幸自己曾经和一群天才般的少男少女一同学习。"
+        },
+        "time": "2012 - 2015"
+    },
+    {
+        "title": {
+            "en": "Westlake Boys High School",
+            "zh": "西湖男子高中"
+        },
+        "location": {
+            "en": "Auckland, New Zealand",
+            "zh": "新西兰·奥克兰"
+        },
+        "content": {
+            "en": "Glad that I did not turn into a gay.",
+            "zh": "很高心没有喜欢上男人。"
+        },
+        "time": "2015 - 2018"
+    },
+    {
+        "title": {
+            "en": "The University of Auckland",
+            "zh": "奥克兰大学"
+        },
+        "location": {
+            "en": "Auckland, New Zealand",
+            "zh": "新西兰·奥克兰"
+        },
+        "content": {
+            "en": "Covid-19. We are experiencing one of the most major event in human history.",
+            "zh": "新冠病毒。我们正在见证历史。"
+        },
+        "time": "2019 - 2021"
+    },
+    {
+        "title": {
+            "en": "Death",
+            "zh": "死亡"
+        },
+        "location": {
+            "en": "Unknown",
+            "zh": "未知"
+        },
+        "content": {
+            "en": "What is it like after death? I have no idea. But at least, do something before leaving this world.",
+            "zh": "死亡之后是怎么样的？我不知道。但至少，在离开这个世界之前，尽情地绽放吧。"
+        },
+        "time": "??/??/????"
+    }
+]

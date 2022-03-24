@@ -16,12 +16,12 @@ export default function (props) {
     const [isActive, setIsActive] = useState(defaultActive);
 
     useEffect(() => {
-        if (isActive){
+        if (isActive) {
             setBg(themes[theme].color);
-        }else{
+        } else {
             setFg(themes[theme].color);
         }
-        
+
     }, [theme])
 
     return (
@@ -57,8 +57,8 @@ export default function (props) {
                         setBg(themes[theme].color);
                         setFg('white')
                     }
+                    setIsActive(pre => !pre);
                 }
-                setIsActive(pre => !pre);
                 onClick();
             }}
         >

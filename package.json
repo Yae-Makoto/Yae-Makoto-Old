@@ -23,6 +23,8 @@
         "react-router-dom": "^6.2.2",
         "react-scripts": "5.0.0",
         "react-scroll-motion": "^0.2.6",
+        "react-swipeable-views": "^0.14.0",
+        "react-swipeable-views-utils": "^0.14.0",
         "react-transition-group": "^4.4.2",
         "smoothscroll-polyfill": "^0.4.4",
         "video.js": "^7.18.1",
