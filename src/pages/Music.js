@@ -6,6 +6,8 @@ import { Context } from "../services/Context/Context";
 import Layout from "../templates/Layout";
 import Title from "../components/Title";
 import Menu from "../components/Menu";
+import { SvgHarp } from "../components/SvgIcon/SvgIcon";
+import ContentCover from "../templates/ContentCover";
 
 export default function () {
     const { done, data } = useFetchObject('/data/music/index.json');
@@ -23,7 +25,20 @@ export default function () {
         done ?
             <PageWithCoverAutoOpen
                 cover={
-                    <div>cover</div>
+                    <ContentCover
+                        icon={<SvgHarp />}
+                        text={
+                            <p>
+                                愿希望之火与你我同在
+                                <br></br>
+                                为世界上所有的美好而战
+                                <br></br><br></br>
+                                May the fires of hope always guide us
+                                <br></br>
+                                Fight for all that is beautiful in the world
+                            </p>
+                        }
+                    />
                 }
                 content={
                     <Layout

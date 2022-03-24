@@ -6,6 +6,8 @@ import { useContext, useState } from "react";
 import { Context } from "../services/Context/Context";
 import VideoPlayer from "../components/VideoPlayer";
 import Title from "../components/Title";
+import ContentCover from "../templates/ContentCover";
+import { SvgFire } from "../components/SvgIcon/SvgIcon";
 
 export default function () {
     const { done, data } = useFetchObject('/data/video/index.json');
@@ -14,7 +16,21 @@ export default function () {
         done ?
             <PageWithCoverAutoOpen
                 cover={
-                    <div>cover</div>
+                    <ContentCover
+                        icon={<SvgFire />}
+                        text={
+                            <p>
+                                愿希望之火与你我同在
+                                <br></br>
+                                为世界上所有的美好而战
+                                <br></br><br></br>
+                                May the fires of hope always guide us
+                                <br></br>
+                                Fight for all that is beautiful in the world
+                            </p>
+                        }
+                    />
+
                 }
                 content={
                     <Layout

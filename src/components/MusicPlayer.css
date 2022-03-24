@@ -1,7 +1,8 @@
 .music-player {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     top: 0;
+    right: 0;
     position: absolute;
     min-width: 300px;
     display: flex;
