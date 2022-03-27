@@ -1,4 +1,6 @@
-# Kokomi - A php Web Game
+# Kokomi
+
+## A php Web Game
 
 A little webpage game made of html-css-javascript front end, php back end and MySQL database
 

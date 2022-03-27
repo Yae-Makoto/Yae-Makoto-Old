@@ -1,4 +1,6 @@
-# Yae Makoto - Hongchen's Personal Website
+# Yae Makoto
+
+## Hongchen's Personal Website
 
 The website is written under ReactJs framework and hosted by Github Pages.
 

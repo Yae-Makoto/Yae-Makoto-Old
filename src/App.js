@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
-import './Antd.less';
-import './App.less';
+import './App.css';
 import ThemeProvider from './services/Context/Theme';
 import 'antd/dist/antd.css';
 import Scrollbar from './components/Scrollbar';

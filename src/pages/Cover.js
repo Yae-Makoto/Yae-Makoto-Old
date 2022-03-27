@@ -42,7 +42,6 @@ export default function () {
                 <div className="cover-index">
                     <Card svg={<SvgFingerprint />} text={coverConfig[0][lang]} onClick={() => navigate('/info')} />
                     <Card svg={<SvgFootprint />} text={coverConfig[5][lang]} onClick={() => navigate('/footprint')} />
-                    {/* <Card svg={<SvgBook />} text={coverConfig[1][lang]} onClick={() => navigate('/note')} /> */}
                     <Card svg={<SvgStack />} text={coverConfig[2][lang]} onClick={() => navigate('/app')} />
                     <Card svg={<SvgMusic />} text={coverConfig[3][lang]} onClick={() => navigate('/music')} />
                     <Card svg={<SvgMovie />} text={coverConfig[4][lang]} onClick={() => navigate('/video')} />

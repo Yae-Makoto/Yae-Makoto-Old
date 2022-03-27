@@ -45,7 +45,7 @@ export default function () {
                     index={index}
                     onChangeIndex={handleIndexChange}
                     enableMouseEvents
-                    interval={6000}
+                    interval={10000}
                 >
                     {
                         data.map((e) =>
