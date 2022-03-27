@@ -1,4 +1,6 @@
-# Yae Makoto - Hongchen的个人网站
+# Yae Makoto 
+
+## Hongchen的个人网站
 
 此网站使用ReactJs框架编写，并由Github Pages托管。
 
